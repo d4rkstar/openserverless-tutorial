@@ -1,0 +1,25 @@
+packages:
+  contact:
+    inputs:
+      POSTGRES_URL:
+        type: string
+        value: $POSTGRES_URL      
+    actions:
+      submit:
+        function: contact/submit.js
+        web: true
+
+      write:
+        function: contact/write.js
+        web: true
+
+      notify:
+        function: contact/notify.js
+        web: true
+        inputs:
+          NOTIFICATION_URL:
+            type: string
+            value: $NOTIFICATION_URL
+
+      create-table:
+        function: contact/create-table.js

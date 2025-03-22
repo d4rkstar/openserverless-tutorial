@@ -1,0 +1,9 @@
+packages:
+  contact:
+    sequences:
+      submit-write:
+        actions: submit, write
+        web: true
+      submit-notify:
+        actions: submit-write, notify
+        web: true
